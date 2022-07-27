@@ -1,5 +1,6 @@
 import React from "react";
 import defaultImg from "../images/defaultImg.jpeg";
+import { Card ,Box, Typography } from "@mui/material";
 
 function BookCard(props) {
   const { book } = props;
@@ -10,8 +11,8 @@ function BookCard(props) {
     imgDefined = true;
   }
   return (
-    <div className="card-container w-1/4 m-5 border p-3">
-      <div className="flex flex-col justify-between">
+    <Box sx={{ alignSelf: 'flex-start' }}>
+      <Card variant="outlined">
         <img
           src={
             imgDefined ? book.volumeInfo.imageLinks.smallThumbnail : defaultImg
@@ -22,8 +23,8 @@ function BookCard(props) {
         <h2>Titre : {book.volumeInfo.title}</h2>
         <h3>Auteur(s) : {book.volumeInfo.authors}</h3>
         <p>Date : {book.volumeInfo.publishedDate}</p>
-      </div>
-    </div>
+      </Card>
+    </Box>
   );
 }
 

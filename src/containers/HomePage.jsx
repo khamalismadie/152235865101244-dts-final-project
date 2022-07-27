@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <>
       <Box className={styles.container}>
-        <Typography variant="body1">Halo, ini adalah halaman utama</Typography>
+        <Typography variant="body1">Temukan buku favoritmu disini</Typography>
       </Box>
     </>
   );
