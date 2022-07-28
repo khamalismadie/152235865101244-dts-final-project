@@ -1,6 +1,6 @@
 import React from "react";
 import defaultImg from "../images/defaultImg.jpeg";
-import { Card ,Box, Typography } from "@mui/material";
+import { Card ,Grid, Typography } from "@mui/material";
 
 function BookCard(props) {
   const { book } = props;
@@ -11,20 +11,19 @@ function BookCard(props) {
     imgDefined = true;
   }
   return (
-    <Box sx={{ alignSelf: 'flex-start' }}>
+    <Grid sx={{ alignItems:`center`, justify:`center` }}>
       <Card variant="outlined">
         <img
-          src={
+          src={`${
             imgDefined ? book.volumeInfo.imageLinks.smallThumbnail : defaultImg
-          }
-          className="w-auto h-96"
-          alt=""
+          }?w=300&h=300&fit=crop&auto=format`}
+          alt={book.volumeInfo.title}
         />
-        <h2>Titre : {book.volumeInfo.title}</h2>
-        <h3>Auteur(s) : {book.volumeInfo.authors}</h3>
-        <p>Date : {book.volumeInfo.publishedDate}</p>
+        <Typography variant="h6">Judul : {book.volumeInfo.title}</Typography>
+        <Typography variant="subtitle1">Penulis : {book.volumeInfo.authors}</Typography>
+        <Typography variant="subtitle1">Tanggal terbit : {book.volumeInfo.publishedDate}</Typography>
       </Card>
-    </Box>
+    </Grid>
   );
 }
 
