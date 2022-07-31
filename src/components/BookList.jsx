@@ -8,6 +8,7 @@ function BookList(props) {
     <Grid style={{ alignItems:`center`, width: '100%' }}>
      <Box sx={{ display: 'grid', columnGap: 2, rowGap: 2, gridTemplateColumns: 'repeat(3, 1fr)' }}>
       {books.map((book, i) => {
+        // eslint-disable-next-line no-lone-blocks
         {
           return <BookCard book={book} key={i} />;
         }
