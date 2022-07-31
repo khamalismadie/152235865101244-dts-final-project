@@ -16,7 +16,7 @@ import Search from "./components/Search";
 
 function App() {
   const navigate = useNavigate();
-  const [user, isLoading, error] = useAuthState(auth);
+  const [user, isLoading] = useAuthState(auth);
 
   useEffect(
     () => {
