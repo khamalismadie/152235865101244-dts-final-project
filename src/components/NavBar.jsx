@@ -23,7 +23,7 @@ const NavBar = () => {
 
   return (
     <Box className={styles.grow}>
-      <AppBar position="static">
+      <AppBar position="static" component="header" color="primary">
         <Toolbar>
           <Typography variant="h6" component="div" className={styles.grow}>
             Bukusaku

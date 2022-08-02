@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 
 import NavBar from "./components/NavBar";
 import HomePage from "./containers/HomePage";
+import Footer from "./components/Footer";
 
 // Sekarang kita akan membutuhkan useNavigate untuk memaksa pindah rute apabila user belum ada
 import { useNavigate } from "react-router-dom";
@@ -39,6 +40,7 @@ function App() {
       <NavBar />
       <HomePage />
       <Search />
+      <Footer />
     </div>
   );
 }

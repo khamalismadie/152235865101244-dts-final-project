@@ -3,6 +3,9 @@ import request from "superagent";
 import BookList from "./BookList";
 import {Box, TextField, Button} from "@material-ui/core/";
 import styles from "./Search.module.css";
+import {
+  Book
+} from "@mui/icons-material";
 
 function Search() {
   const [books, setBooks] = useState([]);
@@ -26,16 +29,17 @@ function Search() {
   return (
     <Box className={styles.search} >
       <form onSubmit={(e) => searchBook(e)}>
+      <Book color="action" />
         <TextField
           className="shadow appearance-none border rounded mr-3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="username"
           type="text"
-          placeholder="Books..."
+          placeholder="Ketik judul buku"
           value={searchField}
           onChange={(e) => handleSearchField(e)}
         />
         <Button variant="contained" color="primary" type="submit">
-  Submit
+  Cari
 </Button>
       </form>
       <BookList books={books} />
