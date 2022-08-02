@@ -145,7 +145,7 @@ const LoginOrRegisterForm = ({ loginOrRegister }) => {
         />
 
         <Button
-          variant="outlined"
+          variant="contained"
           size="small"
           onClick={buttonLoginOrRegisterOnClickHandler}
         >
